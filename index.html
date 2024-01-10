@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Slack company</title>
+  <style>
+    body {
+      font-family: Helvetica, sans-serif;
+      margin: 0px;
+      padding: 0px;
+    }
+
+    #logo {
+      margin: 10px 40px;
+      display: flex;
+      align-items: center;
+      color: white;
+    }
+
+    #logo div {
+      padding: 5px 5px;
+      font-size: 33px;
+    }
+
+    #logo img {
+      height: 40px;
+      width: 40px;
+    }
+
+    #navbar {
+      display: flex;
+      align-items: center;
+      margin: 0px;
+      background-color: rgb(93, 32, 112);
+      position: sticky;
+    }
+
+    #navbar ul {
+      display: flex;
+      margin-left: 10px;
+    }
+
+    #navbar ul li {
+      list-style: none;
+      margin: 3px;
+      font-size: 15px;
+    }
+
+    #navbar ul li a {
+      color: white;
+      display: block;
+      padding: 0px 10px;
+      text-decoration: none;
+    }
+
+    #navbar ul li a:hover {
+      text-decoration: underline;
+      cursor: pointer;
+    }
+
+    #btn1 {
+      border: 1px solid white;
+      background-color: rgb(93, 32, 112);
+      color: white;
+      margin: auto 5px;
+      border-radius: 10px;
+      padding: 12px 15px;
+      cursor: pointer;
+    }
+
+    #btn1:hover {
+      border-width: 2px solid white;
+    }
+
+    #btn2 {
+      border: 1px solid white;
+      background-color: white;
+      color: rgb(93, 32, 112);
+      margin: auto 5px;
+      border-radius: 10px;
+      padding: 12px 15px;
+      cursor: pointer;
+    }
+
+    #btn2:hover {
+      border-width: 2px solid white;
+    }
+
+    #search_logo img {
+      height: 30px;
+      width: 30px;
+      background-color: rgb(93, 32, 112);
+      margin-left: 120px;
+      margin-right: 20px;
+      cursor: pointer;
+    }
+
+    #navbar a {
+      color: white;
+      margin: auto 10px;
+      text-decoration: none;
+      font-size: 15px;
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+
+    #navbar a:hover {
+      text-decoration: underline;
+    }
+
+    #home {
+      background-color: rgb(93, 32, 112);
+      color: white;
+      display: flex;
+      height: 500px;
+      top: 0px;
+      position: relative;
+      margin: 0px;
+    }
+
+    .block1 p {
+      margin-left: 50px;
+      margin-top: 40px;
+    }
+    .block1 p:nth-child(3) {
+      font-size: 20px;
+    }
+
+    #create {
+      display: flex;
+      font-size: 15px;
+    }
+
+    #email {
+      /* border: 2px solid white; */
+
+      background-color: white;
+      width: 280px;
+      height: 55px;
+      display: flex;
+      text-align: center;
+      justify-content: center;
+      cursor: pointer;
+      margin: auto 5px;
+      margin-left: 50px;
+      /* padding: 5px 15px; */
+      border-radius: 5px;
+    }
+    
+    #email a{
+      margin: auto;
+      text-decoration: none;
+      font-weight: 700;
+    }
+    
+    #google {
+      /* border: 2px solid white; */
+      border-radius: 5px;
+      background-color: rgb(32, 171, 252);
+      color: white;
+      width: 280px;
+      height: 55px;
+      cursor: pointer;
+      display: flex;
+      text-align: center;
+      justify-content: center;
+      margin: auto 5px;
+      /* padding: 10px 15px; */
+    }
+
+    #google a {
+      margin: auto;
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    #google img {
+      background-color: white;
+      margin: auto;
+      height: 32px;
+      width: 32px;
+      border-radius: 5px;
+    }
+
+    .heading {
+      font-size: 55px;
+      font-weight: 600;
+      margin-top: 0px;
+      margin-bottom: 0px;
+    }
+
+    .block1 footer {
+      font-weight: 1200;
+      font-size: 20px;
+      margin-left: 50px;
+      margin-top: 30px;
+    }
+    .block2 video{
+      height: 350px;
+      margin: 20px 30px;
+      border-radius: 20px;
+    }
+    /* client section  */
+    #client_section{
+      position: relative;
+      background-color: rgb(253, 239, 222);
+      text-align: center;
+      margin-top: 0px;
+      top: 0px;
+    }
+    #client_section>h4{
+      margin: 0px auto;
+      padding-top: 45px ;
+      padding-bottom: 20px;
+    }
+    #clients{
+      display: flex;
+      justify-content: center;
+    }
+    .client_item{
+      height: 60px;
+      width: 120px;
+      margin: auto 28px;
+      padding: 2px 5px;
+    }
+    .client_item img{
+      margin: auto 10px;
+      height: 50px;
+      width: 110px;
+    }
+    .feature{
+      display: flex;
+      justify-content: center;
+      margin: 10px auto;
+    }
+    .feature video{
+      height: 500px;
+      width: 600px;
+    }
+    .feature .block2{
+      margin: 100px auto;
+      width: 600px;
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+    }
+    .block2 a{
+      text-decoration: none;
+      color: rgb(0, 162, 255);
+    }
+    .block2 a:hover{
+      text-decoration: underline;
+    }
+    /* customer review section  */
+    #user{
+      background-color: rgb(247, 245, 242);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      /* margin: 0px;
+      position: relative;
+      top: 0px; */
+    }
+    #user .heading{
+      padding-top: 49px;
+      font-size: 52px;
+      /* padding-bottom: 20px; */
+    }
+    #user p:nth-child(2){
+      margin: 30px auto;
+    }
+    #user_buttons{
+      display: flex;
+      justify-content: center;
+    }
+    #user .btn1{
+      font-weight: 600;
+      height: 50px;
+      width: 280px;
+      padding: auto;
+      margin: auto 5px;
+      color: white;
+      background-color: rgb(93, 32, 112);
+      border: 1px solid rgb(93, 32, 112);
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    #user .btn2{
+      height: 50px;
+      width: 180px;
+      font-weight: 600;
+      padding: auto;
+      margin: auto 5px;
+      color: rgb(93, 32, 112);
+      background-color: white;
+      border: 1px solid rgb(93, 32, 112);
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    #user .btn2:hover{
+      border: 2px solid rgb(93, 32, 112);
+    }
+    #percent{
+      display: flex;
+      text-align: left;
+      justify-content: center;
+      margin: 18px auto;
+    }
+    .box{
+      /* border: 2px solid red; */
+      margin: 10px 85px;
+    }
+    .box .heading{
+      color: rgb(93, 32, 112);
+      font-size: 120px;
+      font-weight: 700;
+    }
+    .box p:nth-child(2){
+      margin: 0px;
+      width: 220px;
+      font-size: 14px;
+    }
+    #user .feature {
+      display: flex;
+      margin-left: 0;
+    }
+    #user .feature video{
+      border-top-right-radius: 800px;
+      border-bottom-right-radius: 800px;
+    }
+    #user .block2{
+      display: flex;
+      flex-direction: column;
+      margin: auto 40px;
+      text-align: left;
+      justify-content: center;
+    }
+    /* new section  */
+    #new{
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      flex-direction: column;
+      background-color: rgb(253, 239, 222);
+      height: 600px;
+    }
+    #blocks{
+      margin: 20px;
+      display: grid;
+      grid-template-columns: repeat(4,1fr);
+      grid-gap: 2rem;
+      margin: auto 20px;
+    }
+    .container{
+      background-color: white;
+      border: 7px solid white;
+      /* padding: auto 20px; */
+      height: 400px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: left;
+      /* margin: 20px; */
+      cursor: pointer;
+      box-shadow: 5px 5px 10px 2px rgb(210, 212, 214);
+      transition: all 0.2s ease 0.1s;
+    }
+    .container:hover{
+      transform: scale(1.05);
+    }
+    .container img{
+      width: auto;
+      height: 200px;
+      padding: auto 10px;
+    }
+    .container p:nth-child(3){
+      font-size: 20px;
+      height: 60px;
+      font-weight: 600;
+    }
+    .container a{
+      text-decoration: none;
+      color: rgb(62, 94, 233);
+      font-weight: 600;
+      font-size: 14px;
+    }
+    .container a:hover{
+      color: rgb(59, 175, 221);
+    }
+  </style>
+</head>
+
+<body>
+  <nav id="navbar">
+    <div id="logo">
+      <img src="https://a.slack-edge.com/80588/marketing/img/meta/slack_hash_256.png" alt="">
+      <div>slack</div>
+    </div>
+    <ul>
+      <li class="item"><a href="#">Product</a></li>
+      <li class="item"><a href="#">Solution</a></li>
+      <li class="item"><a href="#">Enterprise</a></li>
+      <li class="item"><a href="#">Resources</a></li>
+      <li class="item"><a href="#">Pricing</a></li>
+    </ul>
+    <div id="search_logo"><img src="https://www.clipartmax.com/png/middle/6-60526_magnifying-glass-clipart-black-and-white-search-icon-transparent.png" alt=""></div>
+    <a href="#">Sign in</a>
+    <button id="btn1">TALK TO SALES</button>
+    <button id="btn2">TRY FOR FREE</button>
+  </nav>
+  <section id="home">
+    <div class="block1">
+      <p class="heading">Made for people.</p>
+      <p class="heading" style="color: orange;">Built for productivity.</p>
+      <p>Connect the right people, find anything that you need and automate the rest. That's work in Slack, your productivity platform.</p>
+      <div id="create">
+        <div id="email"><a href="https://slack.com/intl/en-in/get-started#/createnew">SIGN UP WITH EMAIL ADDRESS</a>
+        </div>
+        <div id="google"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/2008px-Google_%22G%22_Logo.svg.png" alt=""><a href="https://accounts.google.com/signin">SIGN UP WITH GOOGLE</a></div>
+      </div>
+      <footer>Slack is free to try for as long as you like</footer>
+    </div>
+    <div class="block2">
+      <video controls loop autoplay src="https://a.slack-edge.com/9436a9f/marketing/img/homepage/e2e-prospects/animations/webm/hero-product-ui.en-IN.webm"></video>
+    </div>
+  </section>
+
+  <section id="client_section">
+    <h4>TRUSTED BY COMPANIES ALL OVER THE WORLD</h4>
+    <div id="clients">
+      <div class="client_item"><img src="https://a.slack-edge.com/8719b/marketing/img/logos/company/_color/logo-seek.png" alt=""></div>
+      <div class="client_item"><img src="https://a.slack-edge.com/8719b/marketing/img/logos/company/_color/logo-xero.png" alt=""></div>
+      <div class="client_item"><img src="https://a.slack-edge.com/96f2e65/marketing/img/logos/company/_color/rea.png" alt=""></div>
+      <div class="client_item"><img src="https://a.slack-edge.com/f854ec/marketing/img/logos/company/_color/rmit.png" alt=""></div>
+      <div class="client_item"><img src="https://a.slack-edge.com/a121d33/marketing/img/digital-hq/logo-ibm.png" alt=""></div>
+      <div class="client_item"><img src="https://a.slack-edge.com/f854ec/marketing/img/logos/company/_color/deliveroo.png" alt=""></div>
+    </div>
+
+    <div class="feature">
+      
+        <video controls loop autoplay src="https://a.slack-edge.com/445abcc/marketing/img/homepage/e2e-prospects/animations/webm/speed.IN.webm"></video>
+      
+      <div class="block2">
+        <p class="heading">Move faster with your tools in one place</p>
+        <p style="font-size: 20px;">Automate away routine tasks with the power of generative AI and simplify your workflow with all your favorite apps ready to go in Slack.</p>
+        <p style="font-size: 20px;"><a href="#">Learn more about the Slack platform</a></p>
+      </div>
+      
+    </div>
+    <div class="feature">
+      <div class="block2">
+        <p class="heading">Choose how you want to work</p>
+        <p style="font-size: 20px;">In Slack, you've got all the flexibility to work when, where and how it's best for you. You can easily chat, send audio and video clips, or join a huddle to talk things through live.</p>
+        <p style="font-size: 20px;"><a href="#">Learn more about flexible communication</a></p>
+      </div>
+      <video controls loop autoplay src="https://a.slack-edge.com/445abcc/marketing/img/homepage/e2e-prospects/animations/webm/flexibility.IN.webm"></video>
+    </div>
+    <div class="feature">
+      <video controls loop autoplay src="https://a.slack-edge.com/445abcc/marketing/img/homepage/e2e-prospects/animations/webm/connectedness.IN.webm"></video>
+      <div class="block2">
+        <p class="heading">Bring your team together</p>
+        <p style="font-size: 20px;">At the heart of Slack are channels: organised spaces for everyone and everything that you need for work. In channels, it's easier to connect across departments, offices, time zones and even other companies.</p>
+        <p style="font-size: 20px;"><a href="#">Learn more about channels</a></p>
+      </div>
+    </div>
+
+  </section>
+
+  <section id="user">
+    <p class="heading">Teams large and small rely on Slack</p>
+    <p>Slack securely scales up to support collaboration at the world's biggest companies.</p>
+    <div id="user_buttons">
+      <button class="btn1">MEET SLACK FOR ENTERPRISE</button>
+      <button class="btn2">TALK TO SALES</button>
+    </div>
+    <div id="percent">
+      <div class="box">
+        <p class="heading">85%</p>
+        <p>of users say that Slack has improved communication</p>
+      </div>
+      <div class="box">
+        <p class="heading">86%</p>
+        <p>feel that their ability to work remotely has improved</p>
+      </div>
+      <div class="box">
+        <p class="heading">88%</p>
+        <p>feel more connected to their teams</p>
+      </div>
+    </div>
+    <div class="feature">
+      <video controls loop autoplay src="https://a.slack-edge.com/1b4e2a3/marketing/img/homepage/true-prospects/customer-showcase/Vodafone_08.mp4"></video>
+      <div class="block2">
+        <p style="font-size: 30px;"><i>'Many technology employees were gravitating naturally to Slack. So we followed our users to what has become one of our most important tools.'</i></p>
+        <span><b>Matt Beal</b></span>
+        <p >Director of Technology Strategy and Architecture, Vodafone</p>
+        <p style="font-size: 20px;"><a href="#">See more customer stories</a></p>
+      </div>
+    </div>
+  </section>
+  <section id="new">
+    <p style="font-size: 36px;"><b>Take a deeper dive into a new way to work</b></p>
+    <div id="blocks">
+      <div class="container">
+        <img src="https://a.slack-edge.com/68be889/marketing/img/promos/promo-state-of-work.jpg" alt="">
+        <p>Report</p>
+        <p>The State Of Work 2023</p>
+        <p><a href="">READ MORE</a></p>
+      </div>
+      <div class="container">
+        <img src="https://a.slack-edge.com/6b9d9e8/marketing/img/promos/wtny-resource-tile.jpg" alt="">
+        <p>On demand</p>
+        <p>Big things are launching.Relive the highlights of World Tour New York !</p>
+        <p><a href="">WATCH NOW</a></p>
+      </div>
+      <div class="container">
+        <img src="https://a.slack-edge.com/426ed86/marketing/img/promos/promo-open-ai.jpg" alt="">
+        <p>Customer Story</p>
+        <p>The next big thing? AI for everyone</p>
+        <p><a href="">READ MORE</a></p>
+      </div>
+      <div class="container">
+        <img src="https://a.slack-edge.com/426ed86/marketing/img/promos/promo-boost-productivity.jpg" alt="">
+        <p>Webinar</p>
+        <p>Top Slack tips to boost productivity</p>
+        <p><a href="">WATCH NOW</a></p>
+      </div>
+    </div>
+  </section>
+</body>
+
+</html>
